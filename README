@@ -22,8 +22,10 @@ to
 before :ensure_authenticated, :only => [:new,:edit,:create,:update,:destroy,:delete]
 
 2. merb -i  # need to install webrat (sudo gem install webrat)
-
 >> u = User.new(:login => "admin")
 >> u.password = u.password_confirmation = "pass"
 >> u.save
 >> exit
+
+3. start merb, go to http://localhost:4000 
+when pop up login page, login with user: admin  and password: password
