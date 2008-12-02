@@ -8,5 +8,12 @@ class Article
   property :body, Text, :lazy => false # work around solution, fixed in the future
   property :title, String
   property :updated_at, DateTime
+  
+  before :valid?, :set_permalink
 
+  # our callback needs to accept the context used in the validation,
+  # even if it ignores it, as #save calls #valid? with a context.
+  def set_permalink(context = :default)
+    self.slug = title.gsub(/\s+/,'_')
+  end
 end
