@@ -8,16 +8,22 @@ Install required gems, Create database, default SQLite3
 
 rake db:automigrate
 
+=== Run Server
+
+merb
+
+
 === Add authentication to Merblog
 
-1. merb -i  # need to install webrat (sudo gem install webrat)
+1. remove comment on before filter in app/controllers/articles.rb (line 4)
+from
+#before :ensure_authenticated, :only => [:new,:edit,:create,:update,:destroy,:delete]
+to
+before :ensure_authenticated, :only => [:new,:edit,:create,:update,:destroy,:delete]
+
+2. merb -i  # need to install webrat (sudo gem install webrat)
 
 >> u = User.new(:login => "admin")
 >> u.password = u.password_confirmation = "pass"
 >> u.save
 >> exit
-
-=== Run Server
-
-merb
-
