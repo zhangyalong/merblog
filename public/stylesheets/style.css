@@ -1,0 +1,130 @@
+/*--
+Created by Mike Ruckman. Feel free to use and hack this sheet, let me know what you use it on. Email me at mike<at>theruckman<dot>com.
+--*/
+
+* {
+    font-family: sans-serif, Arial, Helvetica;
+}
+
+body {
+    padding-top: 25px;
+    padding-left: 25px;    
+}
+
+#wrapper {
+    width: 800px;
+}
+
+#body {
+    height: 100%;
+}
+
+#gMenu {
+    width: 200px;
+    float: left;
+    margin-left: -16px;
+    margin-right: 10px;
+}
+
+#gMenu ul {
+    width: 100%;
+    height: 100%;
+}
+
+#gMenu ul li {
+    list-style: none;
+    margin-top: 5px;
+    padding-top: 5px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+#gMenu ul a {
+    text-decoration: none;
+    color: gray;
+}
+
+#gMenu ul li:hover {
+    background-color: black;
+}
+
+#media {
+    width: 535px;
+    border: solid 2px black;
+    float: right;
+    margin: 10px;
+    font-size: 12px;
+}
+
+#media h2 {
+    margin: 15px;
+    border-left: 3px solid black;
+    border-bottom: 1px solid black;
+    padding-left: 5px;
+}
+
+#media p {
+    margin: 15px;
+    padding: 5px;
+    border: dashed 1px gray;
+}
+
+#media p a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+#media p a:hover {
+    color: gray;
+}
+
+#links {
+    width:200px;
+    left: 23px;
+    border: solid 1px black;
+    position: relative;
+    float: left;
+    padding-top: 1em;
+}
+
+#links ul {
+    list-style: none;
+    height: 90%;
+}
+
+#links ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+#links ul li a:hover {
+    color: gray;
+}
+
+#footer {
+    margin-top: 5px;
+    background: #CCC;
+}
+
+#footer p {
+    font-size: 10px;
+    color: gray;
+    text-align: center;
+}
+
+.imgRight {
+    float: right;
+    margin: 10px;
+    padding: 5px;
+    border: dashed 1px gray;
+}
+
+.imgLeft {
+    float: left;
+    margin: 10px;
+    padding: 5px;
+    border: dashed 1px gray;
+}

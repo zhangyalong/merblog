@@ -1,0 +1,13 @@
+== Welcome to Merblog
+
+Merblog is a simple blog written in Merb
+
+== Getting Started
+
+Install required gems, Create database, default SQLite3
+
+rake db:automigrate
+
+=== Run Server
+
+merb

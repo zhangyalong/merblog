@@ -1,0 +1,22 @@
+
+ 
+<%= form_for(@article, :action => resource(:articles) ) do %>
+ 
+	<h2>Title</h2>
+	<p>
+	  <%= text_field :title %>
+	</p>
+	<h2>Slug</h2>
+	<p>
+	  <%= text_field :slug %>
+	</p>
+	<h2>Content</h2> 
+	<p>
+	  <%= text_area :body %>
+	</p>
+  <p>
+    <%= submit "Create" %>
+  </p>
+<% end =%>
+ 
+<%= link_to 'Back', resource(:articles) %>
