@@ -9,7 +9,7 @@ class Article
   property :title, String
   property :updated_at, DateTime
   
-  before :valid?, :set_permalink
+  # before :valid?, :set_permalink
 
   # our callback needs to accept the context used in the validation,
   # even if it ignores it, as #save calls #valid? with a context.

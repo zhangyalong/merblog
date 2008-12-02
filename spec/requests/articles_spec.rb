@@ -18,7 +18,6 @@ describe "resource(:articles)" do
     end
 
     it "contains a list of articles" do
-      pending
       @response.should have_xpath("//ul")
     end
     
@@ -30,7 +29,6 @@ describe "resource(:articles)" do
     end
     
     it "has a list of articles" do
-      pending
       @response.should have_xpath("//ul/li")
     end
   end
@@ -43,7 +41,8 @@ describe "resource(:articles)" do
     end
     
     it "redirects to resource(:articles)" do
-      @response.should redirect_to(resource(Article.first), :message => {:notice => "article was successfully created"})
+      # @response.should redirect_to(resource(Article.first), :message => {:notice => "article was successfully created"})
+      @response.should redirect_to(resource(:articles),:method => "GET")
     end
     
   end
@@ -102,7 +101,8 @@ describe "resource(@article)", :given => "a article exists" do
     end
   
     it "redirect to the article show action" do
-      @response.should redirect_to(resource(@article))
+      # @response.should redirect_to(resource(@article))
+      @response.should redirect_to(resource(:articles),:method => "GET")
     end
   end
   
